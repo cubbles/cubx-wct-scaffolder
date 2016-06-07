@@ -11,8 +11,8 @@ npm package for generate wct test scaffold for cubbles components.
     var path = require('path');
     var scaffolder = require('cubx-wct-scaffolder')
     // Path to webpackage
-    var webpackagePath = path.join(process.cwd(),'..','webpackages','my-webpackage');
-    scaffolder.scaffold(webpacakgePath);
+    var webpackagePath = path.join(process.cwd(), '..', 'webpackages', 'my-webpackage');
+    scaffolder.scaffold(webpackagePath);
 
 
 ## CLI
