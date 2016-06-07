@@ -22,8 +22,9 @@
     "cubx-wct-scaffolder": "./bin/cubx-wct-scaffolder.js"
   },
   "files": [
+    "bin",
     "lib",
-    "LICENSE"
+    "skeletons"
   ],
   "author": "Judit Ross <judit.ross@incowia.com>",
   "license": "Apache-2.0",
