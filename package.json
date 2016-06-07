@@ -4,7 +4,8 @@
   "description": "Generate a scaffold of wct test for cubbls components.",
   "main": "./lib/scaffolder.js",
   "scripts": {
-    "start": "node ./bin/cubx-wct-scaffolder"
+    "prepublish": "npm run lint",
+    "lint": "eslint lib task *.js"
   },
   "repository": {
     "type": "git",
@@ -18,7 +19,7 @@
     "web-component-tester"
   ],
   "bin": {
-    "cubx-wct-scaffolder": "./bin/cubx-wct-scaffolder"
+    "cubx-wct-scaffolder": "./bin/cubx-wct-scaffolder.js"
   },
   "files": [
     "lib",
@@ -27,9 +28,9 @@
   "author": "Judit Ross <judit.ross@incowia.com>",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/cubbles/cubx-wct-test-scaffolder/issues"
+    "url": "https://github.com/cubbles/cubx-wct-scaffolder/issues"
   },
-  "homepage": "https://github.com/cubbles/cubx-wct-test-scaffolder#readme",
+  "homepage": "https://github.com/cubbles/cubx-wct-scaffolder#readme",
   "dependencies": {
     "command-line-args": "^3.0.0",
     "fs-extra": "^0.30.0",

@@ -1,5 +1,6 @@
 # cubx-wct-scaffolder
 
+
 npm package for generate wct test scaffold for cubbles components.
 
 ## Install
@@ -19,8 +20,8 @@ npm package for generate wct test scaffold for cubbles components.
 ### Run (standalone)
     cubx-wct-scaffolder <webpackagePath> [--loglevel <loglevel>]
 
-* _webpackagePath_: relative or absolut path of the webpackage.
-* *--loglevel*: loglevel for console logging. Possible values [silly,debug,info,warn,error], default value: info
+* __webpackagePath__: relative or absolut path of the webpackage.
+* __--loglevel__: loglevel for console logging. Possible values [silly,debug,info,warn,error], default value: info
 
 
 [npm-image]: https://img.shields.io/npm/v/cubx-wct-scaffolder.svg?style=flat
