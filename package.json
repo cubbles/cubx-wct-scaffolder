@@ -5,8 +5,7 @@
   "main": "./lib/scaffolder.js",
   "scripts": {
     "prepublish": "npm run lint",
-    "lint": "eslint lib task *.js",
-    "start": "./bin/cubx-wct.scaffolder"
+    "lint": "eslint lib *.js"
   },
   "repository": {
     "type": "git",
@@ -20,7 +19,7 @@
     "web-component-tester"
   ],
   "bin": {
-    "cubx-wct-scaffolder": "./bin/cubx-wct-scaffolder"
+    "cubx-wct-scaffolder": "./bin/cubx-wct-scaffolder.js"
   },
   "files": [
     "lib",

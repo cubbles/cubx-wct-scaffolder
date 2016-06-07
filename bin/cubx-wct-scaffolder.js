@@ -2,7 +2,7 @@
 /* eslint-env node */
 'use strict';
 
-var scaffolder = require('../scaffolder');
+var scaffolder = require('../lib/scaffolder');
 var logger = require('../lib/logger');
 var commandLineArgs = require('command-line-args');
 
