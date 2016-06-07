@@ -1,0 +1,44 @@
+{
+  "name": "cubx-wct-test-scaffolder",
+  "version": "0.1.0",
+  "description": "<script src=\"../../../web-component-tester-4.2.2@0.1.0/web-component-tester/browser.js\"></script>\u001b[1;2D\u001b[1;2D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[3~\u001b[3~\u001b[3~\u001b[3~\u001b[3~\u001b[3~\u001b[3~\u001b[3~\u001b[3~\u001b[3~\u001b[3~Tool to scaffold unit tests within the artifacts\u001b[3~\u001b[3~\u001b[3~\u001b[3~\u001b[3~\u001b[3~\u001b[3~.\u001b[D\u001b[C",
+  "main": "./lib/scaffolder.js",
+  "scripts": {
+    "start": "node ./bin/cubx-wct-scaffolder"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cubbles/cubx-wct-test-scaffolder.git"
+  },
+  "keywords": [
+    "cubbles",
+    "cubx",
+    "scaffold",
+    "wct",
+    "web-component-tester"
+  ],
+  "bin": {
+    "cubx-wct-scaffolder": "./bin/cubx-wct-scaffolder"
+  },
+  "files": [
+    "lib",
+    "LICENSE"
+  ],
+  "author": "Judit Ross <judit.ross@incowia.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/cubbles/cubx-wct-test-scaffolder/issues"
+  },
+  "homepage": "https://github.com/cubbles/cubx-wct-test-scaffolder#readme",
+  "dependencies": {
+    "command-line-args": "^3.0.0",
+    "fs-extra": "^0.30.0",
+    "inquirer": "^1.0.3",
+    "lodash": "^4.13.1",
+    "mustache": "^2.2.1",
+    "recursive-readdir-sync": "^1.0.6",
+    "winston": "^2.2.0"
+  },
+  "devDependencies": {
+  }
+}
