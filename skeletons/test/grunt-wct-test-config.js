@@ -11,7 +11,7 @@ module.exports = function (grunt) {
             remote: false,
             plugins: {
               local: {
-                browsers: [ 'chrome' ],
+                browsers: [ 'chrome', 'firefox' ],
                 options: { remote: false }
               }
             },

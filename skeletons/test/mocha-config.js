@@ -4,5 +4,6 @@
 mocha.setup({ ui: 'bdd' });
 /* eslint no-unused-vars: [1, { "varsIgnorePattern": "assert|should" } ]*/
 var assert = chai.assert;
+var expect = chai.expect;
 // Note that should has to be executed
 var should = chai.should();
