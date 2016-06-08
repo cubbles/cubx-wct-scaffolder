@@ -1,7 +1,6 @@
 # cubx-wct-scaffolder
 
-
-npm package for generate wct test scaffold for cubbles components.
+Npm package for generate wct test scaffold for cubbles components. It developed for exclusive usage in cubbles projects.
 
 ## Install
 
@@ -14,6 +13,11 @@ npm package for generate wct test scaffold for cubbles components.
     var webpackagePath = path.join(process.cwd(), '..', 'webpackages', 'my-webpackage');
     scaffolder.scaffold(webpackagePath);
 
+It realise the following steps:
+* Read the manifest.webpackage, and extracted the artifactId-s  of all compound and elementary components.
+* Ask for select the dstination artifact( This artifact will be completed with the wct test scaffold.
+* Generate the subdirectory `test` in the artifact directory, and generate all necessary files for tests.
+* Install and add the necessary dependencies to package.json.
 
 ## CLI
 

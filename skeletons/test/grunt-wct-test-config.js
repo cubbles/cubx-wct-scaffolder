@@ -1,5 +1,5 @@
 'use strict';
-
+var path = require('path');
 module.exports = function (grunt) {
   return {
     tasks: {
@@ -27,14 +27,13 @@ module.exports = function (grunt) {
               var context = [ '**', '!/' + grunt.config.get('param.src') + '/**', '!/components/**' ];
 
               var remoteStoreUrl = grunt.config.get('workspaceConfig.remoteStoreUrl');
+              var store = path.basename(remoteStoreUrl);
               // configure proxy middleware options
               var options = {
-                target: {// target host
-                  port: 443,
-                  host: 'cubbles.world'
-                },
-                proxyTable: {
-                  'localhost:2000': remoteStoreUrl
+                target: 'https://cubbles.world',
+                changeOrigin: true,
+                pathRewrite: {
+                  '^/': '/' + store + '/'
                 },
                 logLevel: 'error'
               };
