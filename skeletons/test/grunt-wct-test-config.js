@@ -7,7 +7,7 @@ module.exports = function (grunt) {
         '{{artifactId}}': {
           options: {
             verbose: true,
-            root: '<%= workspacePath %>/<%= activeWebpackage %>/{{artifactId}}',
+            root: '<%= workspacePath %>/{{webpackage}}/{{artifactId}}',
             remote: false,
             plugins: {
               local: {
