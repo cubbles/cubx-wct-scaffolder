@@ -5,7 +5,8 @@
   "main": "./lib/scaffolder.js",
   "scripts": {
     "prepublish": "npm run lint",
-    "lint": "eslint lib *.js"
+    "lint": "eslint lib *.js",
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -42,7 +43,10 @@
     "winston": "^2.2.0"
   },
   "devDependencies": {
-    "http-proxy-middleware": "^0.15.2",
-    "web-component-tester": "^4.2.2"
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3",
+    "promise": "^7.1.1",
+    "sinon": "^1.17.4",
+    "sinon-chai": "^2.8.0"
   }
 }

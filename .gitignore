@@ -31,4 +31,4 @@ node_modules
 .idea
 
 # workspace within the devtools (because it's for devtools development only)
-webpackages
+test/manual/webpackages/**/test

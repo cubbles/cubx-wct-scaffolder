@@ -1,0 +1,46 @@
+{
+  "name": "my-webpackage",
+  "groupId": "",
+  "version": "0.1.0-SNAPSHOT",
+  "modelVersion": "8.3.1",
+  "docType": "webpackage",
+  "author": {
+    "name": "Judit Ross",
+    "email": "judit.ross@incowia.com"
+  },
+  "license": "MIT",
+  "keywords": [ ],
+  "man": [ ],
+  "artifacts": {
+    "elementaryComponents": [
+      {
+        "artifactId": "my-elementary",
+        "endpoints": [
+          {
+            "endpointId": "main",
+            "resources": [ ],
+            "dependencies": [ ]
+          }
+        ],
+        "slots": [ ]
+      }
+    ],
+    "compoundComponents": [
+      {
+        "artifactId": "my-compound",
+        "endpoints": [
+          {
+            "endpointId": "main",
+            "resources": [ ],
+            "dependencies": [ ]
+          }
+        ],
+        "slots": [ ],
+        "members": [ ],
+        "connections": [ ],
+        "inits": [ ]
+      }
+    ]
+  }
+
+}

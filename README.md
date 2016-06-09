@@ -30,3 +30,4 @@ It realise the following steps:
 
 [npm-image]: https://img.shields.io/npm/v/cubx-wct-scaffolder.svg?style=flat
 [npm-url]: https://npmjs.org/package/cubx-wct-scaffolder
+[![Build Status](https://travis-ci.org/cubbles/cubx-wct-scaffolder.svg?branch=master)](https://travis-ci.org/cubbles/cubx-wct-scaffolder)
