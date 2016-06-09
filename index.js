@@ -14,7 +14,7 @@ var optionDefinitions = [
 var options = commandLineArgs(optionDefinitions);
 
 if (!options.path) {
-  logger.log('error', 'Missed necessary parameter \"webpackagePath\". Usage: node index <webpackagPath> [--loglevel <logLevel>]');
+  logger.log('error', 'Missed necessary parameter "webpackagePath". Usage: node index <webpackagPath> [--loglevel <logLevel>]');
   process.exit(0);
 } else {
   webpackagePath = options.path;
