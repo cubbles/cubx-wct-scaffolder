@@ -1,4 +1,4 @@
-/*global describe,before, beforeEach, after, afterEach, it, expect*/
+/*global describe, beforeEach, afterEach, it*/
 'use strict';
 
 var Promise = require('promise');
@@ -15,41 +15,37 @@ describe('scaffolder', function () {
   var webpackagePath;
   var webpackageName;
   var artifactId;
-  
+
   var getArtifactIdStub;
   var generateWCTFilesStub;
   var installDependenciesStub;
-  beforeEach(function () {
-    testPath = path.join(process.cwd(), 'test', 'unit');
-    webpackageName = 'my-webpackage';
-    artifactId = 'my-elementary';
-    webpackagePath = path.join(testPath, 'webpackages', webpackageName);
-    generateWCTFilesStub = sinon.stub(generator, 'generateWCTFiles', function (webpackagePath, artifactId) {
-      // do nothing
-    });
-    getArtifactIdStub = sinon.stub(promptArtifact, 'getArtifactId', function (webpacakgePath) {
-      return new Promise(function (resolve) {
-        resolve({
-          webpackagePath: webpackagePath,
-          artifactId: artifactId
-        });
-      });
-    });
-    installDependenciesStub = sinon.stub(installer, 'installDependencies', function () {
-      // do nothing
-    });
-  });
-  afterEach(function () {
-    generator.generateWCTFiles.restore();
-    promptArtifact.getArtifactId.restore();
-    installer.installDependencies.restore();
-  });
 
   describe('webpackagePath exists', function () {
     beforeEach(function () {
+      testPath = path.join(process.cwd(), 'test', 'unit');
+      webpackageName = 'my-webpackage';
+      artifactId = 'my-elementary';
+      webpackagePath = path.join(testPath, 'webpackages', webpackageName);
+      generateWCTFilesStub = sinon.stub(generator, 'generateWCTFiles', function (webpackagePath, artifactId) {
+        // do nothing
+      });
+      getArtifactIdStub = sinon.stub(promptArtifact, 'getArtifactId', function (webpacakgePath) {
+        return new Promise(function (resolve) {
+          resolve({
+            webpackagePath: webpackagePath,
+            artifactId: artifactId
+          });
+        });
+      });
+      installDependenciesStub = sinon.stub(installer, 'installDependencies', function () {
+        // do nothing
+      });
       fs.mkdirsSync(path.join(webpackagePath));
     });
     afterEach(function () {
+      generator.generateWCTFiles.restore();
+      promptArtifact.getArtifactId.restore();
+      installer.installDependencies.restore();
       fs.removeSync(path.join(testPath, 'webpackages'));
     });
     describe('webpackagePath is an absolute path', function () {
@@ -78,19 +74,19 @@ describe('scaffolder', function () {
         var webpackageRelPath = path.join(testRelPath, 'webpackages', webpackageName);
         scaffolder.scaffold(webpackageRelPath, done);
       });
-      it('generateWCTFiles called once', function () {
+      it('generateWCTFiles should be called once', function () {
         generateWCTFilesStub.should.be.calledOnce;
       });
-      it('generateWCTFiles called with webpackagaPath and artifactId', function () {
+      it('generateWCTFiles should be called with webpackagaPath and artifactId', function () {
         generateWCTFilesStub.should.be.calledWith(webpackagePath, artifactId);
       });
-      it('getArtifactId called once', function () {
+      it('getArtifactId should be called once', function () {
         getArtifactIdStub.should.be.calledOnce;
       });
-      it('getArtifactId called with webpackagaPath', function () {
+      it('getArtifactId should be called with webpackagaPath', function () {
         getArtifactIdStub.should.be.calledWith(webpackagePath);
       });
-      it('installDependencies called once', function () {
+      it('installDependencies should be called once', function () {
         installDependenciesStub.should.be.calledOnce;
       });
     });
@@ -98,10 +94,31 @@ describe('scaffolder', function () {
   describe('webpackagePath not exists', function () {
     var loggerSpy;
     beforeEach(function (done) {
+      testPath = path.join(process.cwd(), 'test', 'unit');
+      webpackageName = 'my-webpackage';
+      artifactId = 'my-elementary';
+      webpackagePath = path.join(testPath, 'webpackages', webpackageName);
+      generateWCTFilesStub = sinon.stub(generator, 'generateWCTFiles', function (webpackagePath, artifactId) {
+        // do nothing
+      });
+      getArtifactIdStub = sinon.stub(promptArtifact, 'getArtifactId', function (webpacakgePath) {
+        return new Promise(function (resolve) {
+          resolve({
+            webpackagePath: webpackagePath,
+            artifactId: artifactId
+          });
+        });
+      });
+      installDependenciesStub = sinon.stub(installer, 'installDependencies', function () {
+        // do nothing
+      });
       loggerSpy = sinon.spy(logger, 'log');
       scaffolder.scaffold(webpackagePath, done);
     });
     afterEach(function () {
+      generator.generateWCTFiles.restore();
+      promptArtifact.getArtifactId.restore();
+      installer.installDependencies.restore();
       logger.log.restore();
     });
     it('logger.log should be called once', function () {
@@ -120,6 +137,50 @@ describe('scaffolder', function () {
       scaffolder.scaffold(webpackagePath, done);
       installDependenciesStub.should.be.not.called;
     });
+  });
+  describe('Prompt answer with CANCEL', function () {
+    beforeEach(function (done) {
+      testPath = path.join(process.cwd(), 'test', 'unit');
+      webpackageName = 'my-webpackage';
+      artifactId = 'my-elementary';
+      webpackagePath = path.join(testPath, 'webpackages', webpackageName);
+      generateWCTFilesStub = sinon.stub(generator, 'generateWCTFiles', function (webpackagePath, artifactId) {
+        // do nothing
+      });
+      getArtifactIdStub = sinon.stub(promptArtifact, 'getArtifactId', function (webpacakgePath) {
+        return new Promise(function (resolve) {
+          resolve({
+            webpackagePath: webpackagePath,
+            artifactId: 'CANCEL'
+          });
+        });
+      });
+      installDependenciesStub = sinon.stub(installer, 'installDependencies', function () {
+        // do nothing
+      });
+      testPath = path.join(process.cwd(), 'test', 'unit');
+      webpackageName = 'my-webpackage';
+      webpackagePath = path.join(testPath, 'webpackages', webpackageName);
+      fs.mkdirsSync(path.join(webpackagePath));
+      scaffolder.scaffold(webpackagePath, done);
+    });
+    afterEach(function () {
+      generator.generateWCTFiles.restore();
+      promptArtifact.getArtifactId.restore();
+      installer.installDependencies.restore();
+    });
 
+    it('generateWCTFiles should not called', function () {
+      generateWCTFilesStub.should.be.not.called;
+    });
+    it('getArtifactId should be called once', function () {
+      getArtifactIdStub.should.be.calledOnce;
+    });
+    it('getArtifactId should be called with webpackagaPath', function () {
+      getArtifactIdStub.should.be.calledWith(webpackagePath);
+    });
+    it('installDependencies should be not called', function () {
+      installDependenciesStub.should.be.not.called;
+    });
   });
 });
