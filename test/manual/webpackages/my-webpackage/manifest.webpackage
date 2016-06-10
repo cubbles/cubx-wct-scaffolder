@@ -39,8 +39,91 @@
         "members": [ ],
         "connections": [ ],
         "inits": [ ]
+      },
+      {
+        "artifactId": "my-compound-2",
+        "endpoints": [
+          {
+            "endpointId": "main",
+            "resources": [ ],
+            "dependencies": [ ]
+          }
+        ],
+        "slots": [ ],
+        "members": [ ],
+        "connections": [ ],
+        "inits": [ ]
+      },
+      {
+        "artifactId": "my-compound-3",
+        "endpoints": [
+          {
+            "endpointId": "main",
+            "resources": [ ],
+            "dependencies": [ ]
+          }
+        ],
+        "slots": [ ],
+        "members": [ ],
+        "connections": [ ],
+        "inits": [ ]
+      },
+      {
+        "artifactId": "my-compound-4",
+        "endpoints": [
+          {
+            "endpointId": "main",
+            "resources": [ ],
+            "dependencies": [ ]
+          }
+        ],
+        "slots": [ ],
+        "members": [ ],
+        "connections": [ ],
+        "inits": [ ]
+      },
+      {
+        "artifactId": "my-compound-5",
+        "endpoints": [
+          {
+            "endpointId": "main",
+            "resources": [ ],
+            "dependencies": [ ]
+          }
+        ],
+        "slots": [ ],
+        "members": [ ],
+        "connections": [ ],
+        "inits": [ ]
+      },
+      {
+        "artifactId": "my-compound-6",
+        "endpoints": [
+          {
+            "endpointId": "main",
+            "resources": [ ],
+            "dependencies": [ ]
+          }
+        ],
+        "slots": [ ],
+        "members": [ ],
+        "connections": [ ],
+        "inits": [ ]
+      },
+      {
+        "artifactId": "my-compound-7",
+        "endpoints": [
+          {
+            "endpointId": "main",
+            "resources": [ ],
+            "dependencies": [ ]
+          }
+        ],
+        "slots": [ ],
+        "members": [ ],
+        "connections": [ ],
+        "inits": [ ]
       }
     ]
   }
-
 }
