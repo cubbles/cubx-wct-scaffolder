@@ -1,4 +1,4 @@
-/* global describe,it, before,after,berforeEach,afterEach */
+/* global describe,it,before,after,beforeEach,afterEach */
 'use strict';
 
 describe('<{{artifactId}}>', function () {
