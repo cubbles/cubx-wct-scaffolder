@@ -9,7 +9,6 @@ var fs = require('fs-extra');
 describe('scaffolder', function () {
   var generator = require('../../lib/template-generator');
   var promptArtifact = require('../../lib/prompt-artifact');
-  var installer = require('../../lib/dependency-installer');
   var logger = require('../../lib/logger');
   var testPath;
   var webpackagePath;
@@ -18,7 +17,6 @@ describe('scaffolder', function () {
 
   var getArtifactIdStub;
   var generateWCTFilesStub;
-  var installDependenciesStub;
 
   describe('webpackagePath exists', function () {
     beforeEach(function () {
@@ -37,15 +35,11 @@ describe('scaffolder', function () {
           });
         });
       });
-      installDependenciesStub = sinon.stub(installer, 'installDependencies', function () {
-        // do nothing
-      });
       fs.mkdirsSync(path.join(webpackagePath));
     });
     afterEach(function () {
       generator.generateWCTFiles.restore();
       promptArtifact.getArtifactId.restore();
-      installer.installDependencies.restore();
       fs.removeSync(path.join(testPath, 'webpackages'));
     });
     describe('webpackagePath is an absolute path', function () {
@@ -63,9 +57,6 @@ describe('scaffolder', function () {
       });
       it('getArtifactId should be called with webpackagaPath', function () {
         getArtifactIdStub.should.be.calledWith(webpackagePath);
-      });
-      it('installDependencies should be called once', function () {
-        installDependenciesStub.should.be.calledOnce;
       });
     });
     describe('webpackage path is a relative path', function () {
@@ -85,9 +76,6 @@ describe('scaffolder', function () {
       });
       it('getArtifactId should be called with webpackagaPath', function () {
         getArtifactIdStub.should.be.calledWith(webpackagePath);
-      });
-      it('installDependencies should be called once', function () {
-        installDependenciesStub.should.be.calledOnce;
       });
     });
   });
@@ -109,16 +97,12 @@ describe('scaffolder', function () {
           });
         });
       });
-      installDependenciesStub = sinon.stub(installer, 'installDependencies', function () {
-        // do nothing
-      });
       loggerSpy = sinon.spy(logger, 'log');
       scaffolder.scaffold(webpackagePath, done);
     });
     afterEach(function () {
       generator.generateWCTFiles.restore();
       promptArtifact.getArtifactId.restore();
-      installer.installDependencies.restore();
       logger.log.restore();
     });
     it('logger.log should be called once', function () {
@@ -131,11 +115,6 @@ describe('scaffolder', function () {
     it('getArtifactId should be not called', function (done) {
       scaffolder.scaffold(webpackagePath, done);
       getArtifactIdStub.should.be.not.called;
-    });
-
-    it('installDependencies should be not called', function (done) {
-      scaffolder.scaffold(webpackagePath, done);
-      installDependenciesStub.should.be.not.called;
     });
   });
   describe('Prompt answer with CANCEL', function () {
@@ -155,9 +134,6 @@ describe('scaffolder', function () {
           });
         });
       });
-      installDependenciesStub = sinon.stub(installer, 'installDependencies', function () {
-        // do nothing
-      });
       testPath = path.join(process.cwd(), 'test', 'unit');
       webpackageName = 'my-webpackage';
       webpackagePath = path.join(testPath, 'webpackages', webpackageName);
@@ -167,7 +143,6 @@ describe('scaffolder', function () {
     afterEach(function () {
       generator.generateWCTFiles.restore();
       promptArtifact.getArtifactId.restore();
-      installer.installDependencies.restore();
     });
 
     it('generateWCTFiles should not called', function () {
@@ -178,9 +153,6 @@ describe('scaffolder', function () {
     });
     it('getArtifactId should be called with webpackagaPath', function () {
       getArtifactIdStub.should.be.calledWith(webpackagePath);
-    });
-    it('installDependencies should be not called', function () {
-      installDependenciesStub.should.be.not.called;
     });
   });
 });
