@@ -25,7 +25,7 @@ describe('promt-artifact', function () {
       'name': 'my-webpackage',
       'groupId': '',
       'version': '0.1.0-SNAPSHOT',
-      'modelVersion': '8.3.1',
+      'modelVersion': '9.1.0',
       'docType': 'webpackage',
       'author': {
         'name': 'Judit Ross',
@@ -38,26 +38,16 @@ describe('promt-artifact', function () {
         'elementaryComponents': [
           {
             'artifactId': 'my-elementary',
-            'endpoints': [
-              {
-                'endpointId': 'main',
-                'resources': [],
-                'dependencies': []
-              }
-            ],
+            'resources': [],
+            'dependencies': [],
             'slots': []
           }
         ],
         'compoundComponents': [
           {
             'artifactId': 'my-compound',
-            'endpoints': [
-              {
-                'endpointId': 'main',
-                'resources': [],
-                'dependencies': []
-              }
-            ],
+            'resources': [],
+            'dependencies': [],
             'slots': [],
             'members': [],
             'connections': [],

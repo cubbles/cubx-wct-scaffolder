@@ -2,7 +2,7 @@
   "name": "my-webpackage",
   "groupId": "",
   "version": "0.1.0-SNAPSHOT",
-  "modelVersion": "8.3.1",
+  "modelVersion": "9.1.0",
   "docType": "webpackage",
   "author": {
     "name": "Judit Ross",
@@ -15,26 +15,17 @@
     "elementaryComponents": [
       {
         "artifactId": "my-elementary",
-        "endpoints": [
-          {
-            "endpointId": "main",
-            "resources": [ ],
-            "dependencies": [ ]
-          }
-        ],
+        "resources": [ ],
+        "dependencies": [ ],
         "slots": [ ]
       }
     ],
     "compoundComponents": [
       {
         "artifactId": "my-compound",
-        "endpoints": [
-          {
-            "endpointId": "main",
-            "resources": [ ],
-            "dependencies": [ ]
-          }
-        ],
+
+        "resources": [ ],
+        "dependencies": [ ],
         "slots": [ ],
         "members": [ ],
         "connections": [ ],
@@ -42,13 +33,9 @@
       },
       {
         "artifactId": "my-compound-2",
-        "endpoints": [
-          {
-            "endpointId": "main",
-            "resources": [ ],
-            "dependencies": [ ]
-          }
-        ],
+
+        "resources": [ ],
+        "dependencies": [ ],
         "slots": [ ],
         "members": [ ],
         "connections": [ ],
@@ -56,27 +43,18 @@
       },
       {
         "artifactId": "my-compound-3",
-        "endpoints": [
-          {
-            "endpointId": "main",
-            "resources": [ ],
-            "dependencies": [ ]
-          }
-        ],
+
+        "resources": [ ],
+        "dependencies": [ ],
         "slots": [ ],
         "members": [ ],
         "connections": [ ],
         "inits": [ ]
       },
       {
-        "artifactId": "my-compound-4",
-        "endpoints": [
-          {
-            "endpointId": "main",
-            "resources": [ ],
-            "dependencies": [ ]
-          }
-        ],
+
+        "resources": [ ],
+        "dependencies": [ ],
         "slots": [ ],
         "members": [ ],
         "connections": [ ],
@@ -84,13 +62,9 @@
       },
       {
         "artifactId": "my-compound-5",
-        "endpoints": [
-          {
-            "endpointId": "main",
-            "resources": [ ],
-            "dependencies": [ ]
-          }
-        ],
+
+        "resources": [ ],
+        "dependencies": [ ],
         "slots": [ ],
         "members": [ ],
         "connections": [ ],
@@ -98,13 +72,8 @@
       },
       {
         "artifactId": "my-compound-6",
-        "endpoints": [
-          {
-            "endpointId": "main",
-            "resources": [ ],
-            "dependencies": [ ]
-          }
-        ],
+        "resources": [ ],
+        "dependencies": [ ],
         "slots": [ ],
         "members": [ ],
         "connections": [ ],
@@ -112,13 +81,8 @@
       },
       {
         "artifactId": "my-compound-7",
-        "endpoints": [
-          {
-            "endpointId": "main",
-            "resources": [ ],
-            "dependencies": [ ]
-          }
-        ],
+        "resources": [ ],
+        "dependencies": [ ],
         "slots": [ ],
         "members": [ ],
         "connections": [ ],
