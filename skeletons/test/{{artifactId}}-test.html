@@ -3,13 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>unit tests for {{artifactId}}</title>
-    <script src="../../../cubx.core.rte@2.0.1/webcomponents-lite/webcomponents-lite.js"></script>
+    <title>unit tests for &lt;{{artifactId}}&gt;</title>
+    <script src="../../../cubx.core.rte@2.1.0/webcomponents-lite/webcomponents-lite.js"></script>
     <script>
         window.cubx = {
             "CRCInit": {
                 "rootDependencies": [
-                    "this/{{artifactId}}/main"
+                    {
+                        "artifactId": "{{artifactId}}"
+                    }
                 ]
             }
         }
@@ -17,7 +19,7 @@
     <script src="../../../web-component-tester-4.2.2@0.2.0/web-component-tester/browser.js"></script>
     <script src="mocha-config.js"></script>
 
-    <script src="../../../cubx.core.rte@2.0.1/crc-loader/js/main.js" data-CRCInit.loadCIF="true"></script>
+    <script src="../../../cubx.core.rte@2.1.0/crc-loader/js/main.js" data-CRCInit.loadCIF="true"></script>
 
 </head>
 <body>
