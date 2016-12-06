@@ -2,7 +2,7 @@
 /* exported assert,should */
 'use strict';
 mocha.setup({ ui: 'bdd' });
-/* eslint no-unused-vars: [1, { "varsIgnorePattern": "assert|should" } ]*/
+/* eslint no-unused-vars: [1, { "varsIgnorePattern": "assert|should|expect" } ]*/
 var assert = chai.assert;
 var expect = chai.expect;
 // Note that should has to be executed
