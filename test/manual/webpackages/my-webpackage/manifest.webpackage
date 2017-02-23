@@ -52,15 +52,6 @@
         "inits": [ ]
       },
       {
-
-        "resources": [ ],
-        "dependencies": [ ],
-        "slots": [ ],
-        "members": [ ],
-        "connections": [ ],
-        "inits": [ ]
-      },
-      {
         "artifactId": "my-compound-5",
 
         "resources": [ ],

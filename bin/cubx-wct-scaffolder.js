@@ -16,7 +16,7 @@ var optionDefinitions = [
 var options = commandLineArgs(optionDefinitions);
 
 if (!options.path) {
-  logger.log('error', 'Missed necessary parameter \"webpackagePath\". Usage: cubx-wct-scafoolder <webpackagPath> [--loglevel <logLevel>]');
+  logger.log('error', 'Missed necessary parameter "webpackagePath". Usage: cubx-wct-scaffolder <webpackagePath> [--loglevel <logLevel>]');
   process.exit(0);
 } else {
   webpackagePath = options.path;
