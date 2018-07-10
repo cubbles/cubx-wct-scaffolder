@@ -1,5 +1,6 @@
 {
   "name": "cubx-wct-scaffolder",
+
   "version": "1.7.0",
   "description": "Generate a scaffold of wct test for cubbls components.",
   "main": "./lib/scaffolder.js",
