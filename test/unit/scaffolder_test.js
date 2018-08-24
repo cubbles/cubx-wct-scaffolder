@@ -24,10 +24,10 @@ describe('scaffolder', function () {
       webpackageName = 'my-webpackage';
       artifactId = 'my-elementary';
       webpackagePath = path.join(testPath, 'webpackages', webpackageName);
-      generateWCTFilesStub = sinon.stub(generator, 'generateWCTFiles', function (webpackagePath, artifactId) {
+      generateWCTFilesStub = sinon.stub(generator, 'generateWCTFiles').callsFake(function (webpackagePath, artifactId) {
         // do nothing
       });
-      getArtifactIdStub = sinon.stub(promptArtifact, 'getArtifactId', function (webpacakgePath) {
+      getArtifactIdStub = sinon.stub(promptArtifact, 'getArtifactId').callsFake(function (webpacakgePath) {
         return new Promise(function (resolve) {
           resolve({
             webpackagePath: webpackagePath,
@@ -86,10 +86,10 @@ describe('scaffolder', function () {
       webpackageName = 'my-webpackage';
       artifactId = 'my-elementary';
       webpackagePath = path.join(testPath, 'webpackages', webpackageName);
-      generateWCTFilesStub = sinon.stub(generator, 'generateWCTFiles', function (webpackagePath, artifactId) {
+      generateWCTFilesStub = sinon.stub(generator, 'generateWCTFiles').callsFake(function (webpackagePath, artifactId) {
         // do nothing
       });
-      getArtifactIdStub = sinon.stub(promptArtifact, 'getArtifactId', function (webpacakgePath) {
+      getArtifactIdStub = sinon.stub(promptArtifact, 'getArtifactId').callsFake(function (webpacakgePath) {
         return new Promise(function (resolve) {
           resolve({
             webpackagePath: webpackagePath,
@@ -123,10 +123,10 @@ describe('scaffolder', function () {
       webpackageName = 'my-webpackage';
       artifactId = 'my-elementary';
       webpackagePath = path.join(testPath, 'webpackages', webpackageName);
-      generateWCTFilesStub = sinon.stub(generator, 'generateWCTFiles', function (webpackagePath, artifactId) {
+      generateWCTFilesStub = sinon.stub(generator, 'generateWCTFiles').callsFake(function (webpackagePath, artifactId) {
         // do nothing
       });
-      getArtifactIdStub = sinon.stub(promptArtifact, 'getArtifactId', function (webpacakgePath) {
+      getArtifactIdStub = sinon.stub(promptArtifact, 'getArtifactId').callsFake(function (webpacakgePath) {
         return new Promise(function (resolve) {
           resolve({
             webpackagePath: webpackagePath,
