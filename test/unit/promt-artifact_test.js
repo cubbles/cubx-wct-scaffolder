@@ -63,7 +63,7 @@ describe('promt-artifact', function () {
   });
 
   beforeEach(function () {
-    sinon.stub(inquirer, 'prompt', function () {
+    sinon.stub(inquirer, 'prompt').callsFake(function () {
       return new Promise(function (resolve) {
         resolve(artifactId);
       });
