@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cubbles/cubx-wct-test-scaffolder.git"
+    "url": "git+https://github.com/cubbles/cubx-wct-scaffolder.git"
   },
   "keywords": [
     "cubbles",
