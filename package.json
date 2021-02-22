@@ -1,10 +1,13 @@
 {
   "name": "cubx-wct-scaffolder",
-  "version": "3.2.0",
+  "version": "3.2.1",
   "description": "Generate a scaffold of wct test for cubbls components.",
   "main": "./lib/scaffolder.js",
+  "engines": {
+    "node": ">=12.0.0"
+  },
   "scripts": {
-    "prepublish": "npm run lint",
+    "prepublishOnly": "npm run lint",
     "lint": "eslint lib *.js",
     "test": "mocha"
   },
