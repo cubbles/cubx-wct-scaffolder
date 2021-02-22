@@ -1,17 +1,17 @@
 'use strict';
 
-var scaffolder = require('./lib/scaffolder');
-var logger = require('./lib/logger');
-var commandLineArgs = require('command-line-args');
+const scaffolder = require('./lib/scaffolder');
+const logger = require('./lib/logger');
+const commandLineArgs = require('command-line-args');
 
-var webpackagePath;
+let webpackagePath;
 
-var optionDefinitions = [
+const optionDefinitions = [
   { name: 'path', type: String, defaultOption: true },
   { name: 'loglevel', alias: 'l', type: String }
 ];
 
-var options = commandLineArgs(optionDefinitions);
+const options = commandLineArgs(optionDefinitions);
 
 if (!options.path) {
   logger.log('error', 'Missed necessary parameter "webpackagePath". Usage: node index <webpackagPath> [--loglevel <logLevel>]');
@@ -20,7 +20,7 @@ if (!options.path) {
   webpackagePath = options.path;
 }
 
-if (options.loglevel && logger.getLevels()[ options.loglevel ]) {
+if (options.loglevel && logger.getLevels()[options.loglevel]) {
   logger.transports.console.level = options.loglevel;
 }
 
