@@ -1,20 +1,20 @@
 /* global describe,before,beforeEach,after,afterEach,it,expect */
 'use strict';
 
-var promptArtifact = require('../../lib/prompt-artifact');
-var fs = require('fs-extra');
-var path = require('path');
-var sinon = require('sinon');
-var inquirer = require('inquirer');
-var Promise = require('promise');
+const promptArtifact = require('../../lib/prompt-artifact');
+const fs = require('fs-extra');
+const path = require('path');
+const sinon = require('sinon');
+const inquirer = require('inquirer');
+const Promise = require('promise');
 describe('promt-artifact', function () {
-  var testPath;
-  var webpackagePath;
-  var webpackageName;
-  var artifactId;
-  var manifestWebpackage;
+  let testPath;
+  let webpackagePath;
+  let webpackageName;
+  let artifactId;
+  let manifestWebpackage;
 
-  var manifestPath;
+  let manifestPath;
   before(function () {
     testPath = path.join(process.cwd(), 'test', 'unit');
     webpackageName = 'my-webpackage';
@@ -22,36 +22,36 @@ describe('promt-artifact', function () {
     webpackagePath = path.join(testPath, 'webpackages', webpackageName);
     fs.mkdirsSync(path.join(webpackagePath));
     manifestWebpackage = {
-      'name': 'my-webpackage',
-      'groupId': '',
-      'version': '0.1.0-SNAPSHOT',
-      'modelVersion': '9.1.0',
-      'docType': 'webpackage',
-      'author': {
-        'name': 'Judit Ross',
-        'email': 'judit.ross@incowia.com'
+      name: 'my-webpackage',
+      groupId: '',
+      version: '0.1.0-SNAPSHOT',
+      modelVersion: '9.1.0',
+      docType: 'webpackage',
+      author: {
+        name: 'Judit Ross',
+        email: 'judit.ross@incowia.com'
       },
-      'license': 'MIT',
-      'keywords': [],
-      'man': [],
-      'artifacts': {
-        'elementaryComponents': [
+      license: 'MIT',
+      keywords: [],
+      man: [],
+      artifacts: {
+        elementaryComponents: [
           {
-            'artifactId': 'my-elementary',
-            'resources': [],
-            'dependencies': [],
-            'slots': []
+            artifactId: 'my-elementary',
+            resources: [],
+            dependencies: [],
+            slots: []
           }
         ],
-        'compoundComponents': [
+        compoundComponents: [
           {
-            'artifactId': 'my-compound',
-            'resources': [],
-            'dependencies': [],
-            'slots': [],
-            'members': [],
-            'connections': [],
-            'inits': []
+            artifactId: 'my-compound',
+            resources: [],
+            dependencies: [],
+            slots: [],
+            members: [],
+            connections: [],
+            inits: []
           }
         ]
       }
@@ -89,7 +89,7 @@ describe('promt-artifact', function () {
   });
   describe('manifest.webpackage not valid json ', function () {
     beforeEach(function () {
-      var badManifest = '{ ,}';
+      const badManifest = '{ ,}';
       fs.writeFileSync(manifestPath, badManifest);
     });
     afterEach(function () {

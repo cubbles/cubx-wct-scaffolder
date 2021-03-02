@@ -1,22 +1,22 @@
-/*global describe, beforeEach, afterEach, it*/
+/* global describe, beforeEach, afterEach, it */
 'use strict';
 
-var Promise = require('promise');
-var sinon = require('sinon');
-var scaffolder = require('../../lib/scaffolder');
-var path = require('path');
-var fs = require('fs-extra');
+const Promise = require('promise');
+const sinon = require('sinon');
+const scaffolder = require('../../lib/scaffolder');
+const path = require('path');
+const fs = require('fs-extra');
 describe('scaffolder', function () {
-  var generator = require('../../lib/template-generator');
-  var promptArtifact = require('../../lib/prompt-artifact');
-  var logger = require('../../lib/logger');
-  var testPath;
-  var webpackagePath;
-  var webpackageName;
-  var artifactId;
+  const generator = require('../../lib/template-generator');
+  const promptArtifact = require('../../lib/prompt-artifact');
+  const logger = require('../../lib/logger');
+  let testPath;
+  let webpackagePath;
+  let webpackageName;
+  let artifactId;
 
-  var getArtifactIdStub;
-  var generateWCTFilesStub;
+  let getArtifactIdStub;
+  let generateWCTFilesStub;
 
   describe('webpackagePath exists', function () {
     beforeEach(function () {
@@ -61,8 +61,8 @@ describe('scaffolder', function () {
     });
     describe('webpackage path is a relative path', function () {
       beforeEach(function (done) {
-        var testRelPath = path.join('test', 'unit');
-        var webpackageRelPath = path.join(testRelPath, 'webpackages', webpackageName);
+        const testRelPath = path.join('test', 'unit');
+        const webpackageRelPath = path.join(testRelPath, 'webpackages', webpackageName);
         scaffolder.scaffold(webpackageRelPath, done);
       });
       it('generateWCTFiles should be called once', function () {
@@ -80,7 +80,7 @@ describe('scaffolder', function () {
     });
   });
   describe('webpackagePath not exists', function () {
-    var loggerSpy;
+    let loggerSpy;
     beforeEach(function (done) {
       testPath = path.join(process.cwd(), 'test', 'unit');
       webpackageName = 'my-webpackage';

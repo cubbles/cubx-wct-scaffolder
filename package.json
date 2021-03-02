@@ -8,8 +8,8 @@
   },
   "scripts": {
     "prepublishOnly": "npm run lint",
-    "lint": "eslint lib *.js",
-    "test": "mocha"
+    "lint": "eslint lib test *.js",
+    "test": "mocha test/unit/**/*.js --recursive --globals expect"
   },
   "repository": {
     "type": "git",
@@ -48,6 +48,7 @@
     "chai": "^4.3.0",
     "eslint": "^7.20.0",
     "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-chai-friendly": "^0.6.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.3.1",

@@ -1,16 +1,16 @@
-/*global describe,before, beforeEach, after, afterEach, it, expect*/
+/* global describe, beforeEach,  afterEach, it, expect */
 'use strict';
 
-var path = require('path');
-var fs = require('fs-extra');
-var generator = require('../../lib/template-generator');
+const path = require('path');
+const fs = require('fs-extra');
+const generator = require('../../lib/template-generator');
 describe('template-generator', function () {
-  var webpackageName;
-  var webpackagePath;
-  var testPath;
-  var artifactId;
-  var artifactPath;
-  var generatetTestDir;
+  let webpackageName;
+  let webpackagePath;
+  let testPath;
+  let artifactId;
+  let artifactPath;
+  let generatetTestDir;
 
   beforeEach(function () {
     webpackageName = 'my-webpackage';
